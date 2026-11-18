@@ -6,8 +6,8 @@ module.exports = app => {
   router.get("/", membresia.findAll);
   router.get("/status", membresia.findAllStatus);
   router.get("/:carnet", membresia.findOne);
-  router.put("/update/:carnet", membresia.update);
-  router.delete("/delete/:carnet", membresia.delete);
+  router.put("/update/:id", membresia.update);
+  router.delete("/delete/:id", membresia.delete);
   router.delete("/delete/", membresia.deleteAll);
 
   app.use("/api/membresia", router);
